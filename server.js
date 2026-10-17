@@ -15,9 +15,10 @@ app.use((req, res, next) => {
 });
 
 // GET /
+// GET / - Serve static HTML page
 app.get("/", (req, res) => {
-    res.send("My Week 2 API");
-});
+    res.sendFile(__dirname + "/index.html");
+});    
 
 // POST /user
 app.post("/user", (req, res) => {
